@@ -1,13 +1,13 @@
 'use strict';
 
-const Controller = require('app').Controller;
+const Controller = require('egg').Controller;
 
 class UserController extends Controller {
   async info() {
     const ctx = this.ctx;
-    const list = await ctx.service.user.find();
-    console.log(list);
-    // await ctx.render('/test-list.tpl', { list: list })
+    const lists = await ctx.service.user.find();
+    console.log(lists);
+    await ctx.render('info.tpl', { list: lists });
   }
 }
 

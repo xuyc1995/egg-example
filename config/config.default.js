@@ -19,7 +19,7 @@ module.exports = appInfo => {
       port: '3306',
       user: 'root',
       password: 'xyc65930985',
-      database: 'persons',
+      database: 'test',
     },
     app: true,
     agent: false,
